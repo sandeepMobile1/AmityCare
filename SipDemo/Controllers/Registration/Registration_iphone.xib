@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationVC">
+            <connections>
+                <outlet property="barButton" destination="vaS-da-EHt" id="42o-Qk-ZWs"/>
+                <outlet property="btnNext" destination="dwT-bS-b3I" id="Loy-QQ-Rgv"/>
+                <outlet property="keyboardtoolbar" destination="iez-Cf-6cF" id="aF8-48-Pn8"/>
+                <outlet property="scrollView" destination="mqP-iZ-JWy" id="gYV-uy-ofQ"/>
+                <outlet property="tfConfirmPassword" destination="vCA-lq-oAE" id="yO4-zm-FjG"/>
+                <outlet property="tfEmail" destination="h9b-ka-AaS" id="no3-lX-L4g"/>
+                <outlet property="tfFname" destination="H4O-Q6-0cS" id="W7b-Ag-Mt3"/>
+                <outlet property="tfLname" destination="JDe-ag-Jom" id="Rp3-93-njD"/>
+                <outlet property="tfPassword" destination="aem-bj-lR0" id="6cR-cr-dmF"/>
+                <outlet property="txtUserRole" destination="qtr-ps-yN5" id="KDH-qd-ecK"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ggY-gr-5XR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-0r-26t">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-iZ-JWy">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-cu-dXD">
+                            <rect key="frame" x="21" y="104" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4O-Q6-0cS">
+                            <rect key="frame" x="29" y="91" width="259" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="RLn-jW-pIK"/>
+                            </connections>
+                        </textField>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="66s-YO-VA2">
+                            <rect key="frame" x="21" y="149" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDe-ag-Jom">
+                            <rect key="frame" x="29" y="136" width="259" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="0bW-34-hAU"/>
+                            </connections>
+                        </textField>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-kn-qkM">
+                            <rect key="frame" x="23" y="195" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9b-ka-AaS">
+                            <rect key="frame" x="29" y="182" width="261" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="hAx-6T-DCz"/>
+                            </connections>
+                        </textField>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="QXH-cL-BE4">
+                            <rect key="frame" x="21" y="239" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aem-bj-lR0">
+                            <rect key="frame" x="29" y="226" width="259" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="PUu-S6-saE"/>
+                            </connections>
+                        </textField>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="P4g-wT-Esj">
+                            <rect key="frame" x="22" y="284" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-lq-oAE">
+                            <rect key="frame" x="29" y="271" width="260" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Kwt-Gd-vMF"/>
+                            </connections>
+                        </textField>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xs0-Io-WMs">
+                            <rect key="frame" x="25" y="328" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Role" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-ps-yN5">
+                            <rect key="frame" x="29" y="315" width="260" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="l32-6p-PGT"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwT-bS-b3I">
+                            <rect key="frame" x="44" y="374" width="232" height="47"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="NEXT" backgroundImage="login_btn_iphone.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nextBtnAction:" destination="-1" eventType="touchUpInside" id="ggM-T6-C0N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="207" y="74"/>
+        </view>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="iez-Cf-6cF">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="Prev" id="GZS-IY-qWB">
+                    <connections>
+                        <action selector="previous" destination="-1" id="yY2-dU-A6l"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Next" id="qv9-Ag-ejg">
+                    <connections>
+                        <action selector="next" destination="-1" id="1zT-oO-mzf"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="zbd-d0-Ya7"/>
+                <barButtonItem systemItem="done" id="vaS-da-EHt">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="-1" id="Vz2-jd-31E"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+        </toolbar>
+    </objects>
+    <resources>
+        <image name="input_iphone.png" width="277" height="24"/>
+        <image name="login_btn_iphone.png" width="233" height="47"/>
+    </resources>
+</document>

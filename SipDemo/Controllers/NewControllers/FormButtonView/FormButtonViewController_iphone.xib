@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormButtonViewController">
+            <connections>
+                <outlet property="btnSearch" destination="3Ry-mg-0a1" id="i0t-4Z-YKO"/>
+                <outlet property="customBSBtn" destination="tsH-nK-TQS" id="gkR-M9-6hE"/>
+                <outlet property="customEmployeeBtn" destination="r9Q-OB-Jnm" id="uXq-nW-CP6"/>
+                <outlet property="customFamlityBtn" destination="0xI-xs-cwX" id="5G1-6s-NuU"/>
+                <outlet property="customTLBtn" destination="Ntm-7B-5fX" id="Kmg-tG-FKz"/>
+                <outlet property="imgEndDate" destination="rE1-mL-a7T" id="QSp-uf-oZl"/>
+                <outlet property="imgStartDate" destination="jNr-Z9-rek" id="8jN-lS-iMz"/>
+                <outlet property="permissionInnerView" destination="p3J-W0-NVC" id="Rtb-Oc-lBy"/>
+                <outlet property="permissionView" destination="Oxf-OL-rji" id="obf-J9-Wnf"/>
+                <outlet property="radioBSBtn" destination="nib-4H-6lj" id="bda-NX-W5A"/>
+                <outlet property="radioEmployeeBtn" destination="FUT-Of-vrX" id="85D-Cj-nhC"/>
+                <outlet property="radioFamilyBtn" destination="ckE-1W-hIx" id="C10-y1-erk"/>
+                <outlet property="radioTLBtn" destination="Gks-K8-aT5" id="Jto-B3-Nek"/>
+                <outlet property="searchBar" destination="8f9-pE-tel" id="VtD-te-uY2"/>
+                <outlet property="segment" destination="sU9-3P-sas" id="aGh-fT-cfU"/>
+                <outlet property="tblView" destination="Zxz-6M-WD5" id="Png-9w-uNB"/>
+                <outlet property="txtEndDate" destination="iZZ-mW-rK8" id="voI-Zl-Aqg"/>
+                <outlet property="txtStartDate" destination="GXw-P1-19g" id="nKK-cT-ERF"/>
+                <outlet property="view" destination="zbc-63-Nv9" id="9gS-po-L63"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zbc-63-Nv9">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="470"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="sU9-3P-sas">
+                    <rect key="frame" x="5" y="7" width="262" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Form"/>
+                        <segment title="Status"/>
+                        <segment title="Email"/>
+                    </segments>
+                    <color key="tintColor" red="0.28235294119999998" green="0.50196078430000002" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="segmentAction:" destination="-1" eventType="valueChanged" id="okb-IE-VPL"/>
+                    </connections>
+                </segmentedControl>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_date_small" id="jNr-Z9-rek">
+                    <rect key="frame" x="4" y="41" width="120" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_date_small" id="rE1-mL-a7T">
+                    <rect key="frame" x="126" y="41" width="120" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Date" minimumFontSize="17" id="GXw-P1-19g">
+                    <rect key="frame" x="8" y="43" width="116" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="7M5-dm-jXz"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Date" minimumFontSize="17" id="iZZ-mW-rK8">
+                    <rect key="frame" x="129" y="43" width="117" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="YpG-69-M7e"/>
+                    </connections>
+                </textField>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" id="8f9-pE-tel">
+                    <rect key="frame" x="0.0" y="36" width="275" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="z4n-3W-X5T"/>
+                    </connections>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Ry-mg-0a1">
+                    <rect key="frame" x="248" y="44" width="20" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" backgroundImage="search-1">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSearchAction:" destination="-1" eventType="touchUpInside" id="ae8-Nw-4Ty"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zxz-6M-WD5">
+                    <rect key="frame" x="-1" y="79" width="275" height="390"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-10"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="b4u-fL-PqI"/>
+                        <outlet property="delegate" destination="-1" id="6NV-Vr-FFq"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.97628651494565222" green="0.97628651494565222" blue="0.97628651494565222" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71.5" y="-77"/>
+        </view>
+        <view contentMode="scaleToFill" id="Oxf-OL-rji">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="243"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="p3J-W0-NVC" userLabel="Lower View">
+                    <rect key="frame" x="6" y="50" width="261" height="139"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7T5-Og-YT1">
+                            <rect key="frame" x="2" y="51" width="69" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FUT-Of-vrX" userLabel="Redio Button">
+                            <rect key="frame" x="76" y="52" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="popup_unchecked.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="popup_checked.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r9Q-OB-Jnm">
+                            <rect key="frame" x="-1" y="41" width="93" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="employeeBtnPressed:" destination="-1" eventType="touchUpInside" id="9KK-r9-oQ4"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supervisor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mjF-FR-xpL">
+                            <rect key="frame" x="107" y="51" width="76" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gks-K8-aT5" userLabel="Redio Button">
+                            <rect key="frame" x="192" y="52" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="popup_unchecked.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="popup_checked.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ntm-7B-5fX">
+                            <rect key="frame" x="101" y="41" width="113" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="teamLeaderBtnPressed:" destination="-1" eventType="touchUpInside" id="flB-JJ-Scf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3N-L5-lxf">
+                            <rect key="frame" x="2" y="89" width="48" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ckE-1W-hIx" userLabel="Redion Button">
+                            <rect key="frame" x="53" y="90" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="popup_unchecked.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="popup_checked.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0xI-xs-cwX">
+                            <rect key="frame" x="-6" y="78" width="79" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="familyBtnPressed:" destination="-1" eventType="touchUpInside" id="EkK-Ki-QNg"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vr8-Hs-sOH">
+                            <rect key="frame" x="92" y="89" width="25" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nib-4H-6lj" userLabel="Redio Button">
+                            <rect key="frame" x="126" y="89" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="popup_unchecked.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="popup_checked.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tsH-nK-TQS">
+                            <rect key="frame" x="92" y="80" width="60" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="bSBtnPressed:" destination="-1" eventType="touchUpInside" id="fOi-5g-tcN"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give permission of accessing emails :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kYI-5l-Sfv">
+                            <rect key="frame" x="1" y="17" width="265" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E2k-rZ-t3o">
+                    <rect key="frame" x="234" y="3" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="image_close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClosePressed:" destination="-1" eventType="touchUpInside" id="fRd-nU-js2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="53.5" y="-882.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="image_close" width="24" height="24"/>
+        <image name="popup_checked.png" width="24" height="24"/>
+        <image name="popup_unchecked.png" width="24" height="24"/>
+        <image name="search-1" width="40" height="40"/>
+        <image name="start_date_small" width="226" height="58"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

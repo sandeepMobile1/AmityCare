@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="barButton" destination="1VX-lp-yOz" id="VCy-Gg-4Us"/>
+                <outlet property="btnLogin" destination="eQc-gq-9DN" id="DCU-xW-hQO"/>
+                <outlet property="btnRegister" destination="ChH-Z8-EFf" id="XkI-P4-DGo"/>
+                <outlet property="keyboardtoolbar" destination="b4X-wv-T3c" id="gse-pX-lTY"/>
+                <outlet property="scrollView" destination="Poh-9Q-MVA" id="6Sx-A1-NQS"/>
+                <outlet property="tfEmail" destination="mCa-88-KoP" id="zO8-CH-D4s"/>
+                <outlet property="tfPassword" destination="Mtn-0K-Jp9" id="Zyw-yo-87t"/>
+                <outlet property="view" destination="iN0-l3-epB" id="TrY-bv-Aeh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-v2-CUS">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Poh-9Q-MVA">
+                    <rect key="frame" x="0.0" y="53" width="320" height="515"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="mki-8w-Qbl">
+                            <rect key="frame" x="23" y="70" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-88-KoP">
+                            <rect key="frame" x="29" y="57" width="261" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="PbG-zO-Nn9"/>
+                            </connections>
+                        </textField>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="input_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-0L-JeQ">
+                            <rect key="frame" x="21" y="118" width="277" height="24"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-0K-Jp9">
+                            <rect key="frame" x="29" y="105" width="259" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="2dK-tR-VY5"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChH-Z8-EFf">
+                            <rect key="frame" x="45" y="242" width="233" height="47"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="REGISTER" backgroundImage="gray_btn">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="RegistartionAction:" destination="-1" eventType="touchUpInside" id="tsN-gH-auP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQc-gq-9DN">
+                            <rect key="frame" x="45" y="179" width="233" height="47"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="LOGIN" backgroundImage="green_btn">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="LoginAction:" destination="-1" eventType="touchUpInside" id="TMn-fL-KKl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="b4X-wv-T3c">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="Prev" id="GOj-p5-tND">
+                    <connections>
+                        <action selector="previous" destination="-1" id="LfB-Ok-fOx"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Next" id="HYS-xA-YDg">
+                    <connections>
+                        <action selector="next" destination="-1" id="R6j-nF-3nE"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="mLB-KA-DVn"/>
+                <barButtonItem systemItem="done" id="1VX-lp-yOz">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="-1" id="jlt-GH-wA3"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+        </toolbar>
+    </objects>
+    <resources>
+        <image name="gray_btn" width="233" height="47"/>
+        <image name="green_btn" width="233" height="47"/>
+        <image name="input_iphone.png" width="277" height="24"/>
+    </resources>
+</document>

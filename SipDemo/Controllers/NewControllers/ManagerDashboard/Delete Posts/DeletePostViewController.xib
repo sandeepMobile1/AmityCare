@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeletePostViewController">
+            <connections>
+                <outlet property="btnSearch" destination="AfR-dw-Vqr" id="3qs-3p-TUl"/>
+                <outlet property="imgEndDate" destination="aaK-7w-HEi" id="Liz-CM-xMs"/>
+                <outlet property="imgStartDate" destination="nwH-U9-EaH" id="c01-sR-oiX"/>
+                <outlet property="searchBar" destination="oTG-AM-bnk" id="2Vk-wI-rdC"/>
+                <outlet property="segment" destination="Mb2-ph-lWE" id="cv1-lP-Jap"/>
+                <outlet property="tblView" destination="1W8-Gs-HSO" id="O9j-zU-S2c"/>
+                <outlet property="txtEndDate" destination="Dq5-ta-Uma" id="65Z-aO-yv9"/>
+                <outlet property="txtStartDate" destination="HC0-Oz-Jyv" id="HOg-YC-PwZ"/>
+                <outlet property="view" destination="8fM-ND-Wwz" id="Orv-MI-VGQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8fM-ND-Wwz">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" id="oTG-AM-bnk">
+                    <rect key="frame" x="4" y="2" width="410" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="m0Y-XS-DrR"/>
+                    </connections>
+                </searchBar>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_date_big" id="nwH-U9-EaH">
+                    <rect key="frame" x="6" y="7" width="183" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_date_big" id="aaK-7w-HEi">
+                    <rect key="frame" x="197" y="7" width="183" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Date" minimumFontSize="17" id="HC0-Oz-Jyv">
+                    <rect key="frame" x="11" y="8" width="170" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="j8U-vR-tKD"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Date" minimumFontSize="17" id="Dq5-ta-Uma">
+                    <rect key="frame" x="203" y="8" width="170" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ksn-qT-9Tw"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AfR-dw-Vqr">
+                    <rect key="frame" x="384" y="7" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" backgroundImage="search-1">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSearchPressed:" destination="-1" eventType="touchUpInside" id="NTp-af-1Ga"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Mb2-ph-lWE">
+                    <rect key="frame" x="4" y="47" width="410" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="All Notes"/>
+                        <segment title="All Emails"/>
+                        <segment title="All Statuses"/>
+                    </segments>
+                    <color key="tintColor" red="0.28235294119999998" green="0.50196078430000002" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="segmentPressed:" destination="-1" eventType="valueChanged" id="6kP-LN-XAC"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1W8-Gs-HSO">
+                    <rect key="frame" x="0.0" y="83" width="418" height="761"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PSM-cS-Pso"/>
+                        <outlet property="delegate" destination="-1" id="p8u-7e-Q5c"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="76" y="452"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search-1" width="40" height="40"/>
+        <image name="start_date_big" width="324" height="58"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

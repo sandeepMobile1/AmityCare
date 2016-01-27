@@ -1,0 +1,112 @@
+//
+//  SipDemo-Prefix.pch
+//  SipDemo
+//
+//  Created by Shweta Sharma on 09/06/15.
+//  Copyright (c) 2015 Shweta Sharma. All rights reserved.
+//
+
+#ifndef SipDemo_SipDemo_Prefix_pch
+#define SipDemo_SipDemo_Prefix_pch
+
+#define sharedAppDelegate               ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+#define standardUserDefault             [NSUserDefaults standardUserDefaults]
+#define SERVER_MAIL_ATTACHMENT_URL      @"http://encouraginginteraction.com/uploads/attachement/"
+
+#define IS_DEVICE_IPAD                  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define IS_IPHONE_5                     ([[UIScreen mainScreen] bounds].size.height > 480)
+#define MESSAGE_MAIL_TEXT_BACKGROUND_BUBBLE_COLOR       [UIColor colorWithRed:154.0/255.0 green:200.0/255.0 blue:242.0/255.0 alpha:1.0f]
+
+#define UNARCHIEVE_USER_DATA            [NSKeyedUnarchiver unarchiveObjectWithData:[standardUserDefault objectForKey:AC_SAVE_USER_DATA]]
+#define ARCHIEVE_USER_DATA              [standardUserDefault setObject:(NSData*)[NSKeyedArchiver archivedDataWithRootObject:sharedAppDelegate.userObj] forKey:AC_SAVE_USER_DATA]
+#define DEVICE_OS_VERSION_7_0           ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0)
+
+#define DEVICE_OS_VERSION_8_0           ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0)
+
+#define DEVICE_OS_VERSION           [[[UIDevice currentDevice] systemVersion]floatValue]
+
+
+#define AC_FONT_GOTHIC_NORMAL           [UIFont fontWithName:@"CenturyGothic" size:16.0f]
+#define AC_FONT_GOTHIC_BOLD             [UIFont fontWithName:@"CenturyGothic-Bold" size:16.0f]
+#define AC_FONT_NAV_TITLE_HEADING       [UIFont fontWithName:@"AGaramondLT-Regular" size:22.0f];
+
+#define AC_USER_PROFILE_UPDATED_SUCCESSFULLY            @"ACUserProfileDidFinishUpdating"
+#define AC_USER_UNREAD_NOTIFICATION_UPDATE              @"unreadNotificationUpdated"
+#define AC_USER_MESSAGE_RECIEVE                         @"messagereceived"
+#define AC_USER_CONTACT_RECIEVE                         @"contactreceived"
+#define AC_UPDATE_MESSAGE_COUNT                         @"updateMessageCount"
+#define AC_RECIEPT_TAG_SELECTION                         @"tagselection"
+
+#define AC_USER_MISS_CALL_NOTIFICATION_RECIEVE              @"unreadMissCallNotificationUpdated"
+
+#define AC_RIGHT_MENU_NOTIFICATION_UPDATE              @"menuNotificationUpdated"
+
+#define AC_USER_UNREAD_BADGE_UPDATE              @"unreadBadgeUpdated"
+
+
+#define AC_ADD_TASK_UPDATE              @"addTask"
+#define AC_EDIT_TASK_UPDATE              @"editTask"
+
+
+#define AC_DISMISS_POPOVERVIEW_UPDATE              @"dissmissPopoverNotificationUpdated"
+#define AC_SCHEDULE_UPDATE              @"scheduleupdated"
+
+
+#define AC_UPDATE_STATUS_LIST                           @"updateStatusList"
+#define AC_UPDATE_NOTIFICATION_TABLE                    @"updateNotificationTableOnMissedCall"
+
+#define AC_UPDATE_NOTIFICATION_CLOCKOUT                    @"updateNotificationclockout"
+
+
+#define AC_UPDATE_TAG_LIST                               @"updateTagList"
+#define AC_SELECT_TAG_FOR_SCHEDULE                               @"selectTagForSchedule"
+#define AC_TAG_INTRO_UPDATE              @"tagIntroUpdated"
+
+#define AC_BACKPACK_UPDATE              @"backpackupdated"
+#define AC_OCR_UPDATE              @"ocrupdated"
+
+#define AC_STATUS_UPDATE              @"statusupdated"
+#define AC_POST_UPDATE              @"postupdated"
+
+
+#define AC_DROPBOX_UPDATE              @"dropboxupdated"
+
+#define AC_USER_TASK_NOTIFICATION_RECIEVED              @"taskNotificationDidRecieve"
+#define AC_USER_CHANGE_PASS_NOTIFICATION                @"passwordTooOldPlzChangePassword"
+#define AC_USER_INVALIDATE_TIMER                        @"invalidateTimeIfExists"
+#define AC_USER_LOGOUT                                  @"userlogout"
+
+#define AC_MADFORM_CREATED_UPDATES              @"madformsNotificationUpdated"
+#define AC_BEACON_CHECK_UPDATES                         @"beaconupdate"
+#define AC_BEACON_CANCEL_UPDATES                         @"beaconcancelupdate"
+
+
+#define NULL_TO_NIL(obj)                ({ __typeof__ (obj) __obj = (obj); __obj == [NSNull null] ? nil : obj; })
+
+#define  IPHONE_FIVE_FACTOR 88
+
+#define TITLE_FONT_NAME                 @"AGaramondLT-Regular"
+#define appfontName                            @"CenturyGothic"
+#define boldfontName                        @"CenturyGothic-Bold"
+
+#define TEXT_COLOR_GREEN                [UIColor colorWithRed:105/255.0 green:114/255.0 blue:13/255.0 alpha:1.0]
+#define TEXT_COLOR_BLUE                 [UIColor colorWithRed:89/255.0 green:127/255.0 blue:234/255.0 alpha:1.0]
+
+#define MEMORY_WARNING_RECIEVED         @"recieveMemoryWarning"
+#define AC_SAVE_USER_DATA               @"UserData"
+#define DATE_FORMAT_LOGIN               @"dd-MM-yyyy HH:mm:ss"
+#define IS_FIRST_RUN                    @"isAppRunningFirstTime"
+
+#define DROPBOX_IMAGE_EXTENSION         @".bmp, .cr2, .gif, .ico, .ithmb, .jpeg, .jpg, .nef, .png, .raw, .svg, .tif, .tiff, .wbmp, .webp, .JPG"
+#define DROPBOX_TEXT_EXTENSION          @".applescript, .as, .as3, .c, .cc, .clisp, .coffee, .cpp, .cs, .css, .csv, .cxx, .def, .diff, .erl, .fountain, .ft, .h, .hpp, .htm, .html, .hxx, .inc, .ini, .java, .js, .json, .less, .log, .lua, .m, .markdown, .mat, .md, .mdown, .mkdn, .mm, .mustache, .mxml, .patch, .php, .phtml, .pl, .plist, .properties, .py, .rb, .sass, .scss, .sh, .shtml, .sql, .tab, .taskpaper, .tex, .text, .tmpl, .tsv, .txt, .url, .vb, .xhtml, .xml, .yaml, .yml,"
+#define DROPBOX_DOC_EXTENSION           @".csv, .doc, .dochtml, .docm, .docx, .docxml, .dot, .dothtml, .dotm, .dotx, .eps, .fdf, .key, .keynote, .kth, .mpd, .mpp, .mpt, .mpx, .nmbtemplate, .numbers, .odc, .odg, .odp, .ods, .odt, .pages, .pdf, .pdfxml, .pot, .pothtml, .potm, .potx, .ppa, .ppam, .pps, .ppsm, .ppsx, .ppt, .ppthtml, .pptm, .pptx, .pptxml, .prn, .ps, .pwz, .rtf, .tab, .template, .tsv, .txt, .vdx, .vsd, .vss, .vst, .vsx, .vtx, .wbk, .wiz, .wpd, .wps, .xdf, .xdp, .xlam, .xll, .xlr, .xls, .xlsb, .xlsm, .xlsx, .xltm, .xltx, .xps"
+#define DROPBOX_VIDEO_EXTENSION         @"3g2, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .dvi, .flv, .m2t, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .ogv, .ogx, .rm, .rmvb, .ts, .vob, .webm, .wmv"
+
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
